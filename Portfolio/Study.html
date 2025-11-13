@@ -1,0 +1,108 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Portfolio — Study</title>
+
+  <!-- Стили -->
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/header.css">
+  <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="css/footer.css">
+  <link rel="stylesheet" href="css/responsive.css">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Great+Vibes&family=Old+Standard+TT&display=swap" rel="stylesheet">
+</head>
+
+<body>
+   <!-- HEADER -->
+  <header id="site-header">
+    <div class="header-inner">
+      <h1 class="site-title">Laggorithm</h1>
+
+      <!-- Дропбокс с навигацией -->
+      <label for="header-select" class="visually-hidden">Navigation</label>
+      
+      <select id="header-select" name="header-select" aria-label="Выберите раздел">
+        <option value="">— Examples —</option>
+        <option value="index.html">Main</option>
+        <option value="Contacts.html">Contacts</option>
+      </select>
+      <script>
+   
+  const headerSelect = document.getElementById('header-select');
+  headerSelect.addEventListener('change', function() {
+    const selectedValue = this.value;
+    if (selectedValue) {
+      window.location.href = selectedValue; // Переход по ссылке
+    }
+  });
+</script>
+    </div>
+  </header>
+
+    <!-- Навигационные кнопки в виде feature-блоков -->
+    <section class="features" aria-label="Study navigation buttons">
+      <button class="feature" onclick="window.location.href='Csharp.html'">
+        <div class="feature-text">
+          <h2>C# Projects</h2>
+          <p>Explore my programming works and the final project from Business College Helsinki.</p>
+        </div>
+        <figure class="feature-media">
+          <img src="images/project1-thumb.jpg" alt="C# Project Preview" />
+        </figure>
+      </button>
+
+      <button class="feature" onclick="window.location.href='Python.html'">
+        <div class="feature-text">
+          <h2>Python</h2>
+          <p>Collection of Python exercises, automations and small analysis scripts.</p>
+        </div>
+        <figure class="feature-media">
+          <img src="images/project2-thumb.jpg" alt="Python Project Preview" />
+        </figure>
+      </button>
+
+      <button class="feature" onclick="window.location.href='Study/Javascript/JSStudy.html'">
+        <div class="feature-text">
+          <h2>JavaScript</h2>
+          <p>Interactive web projects and logic experiments using JavaScript.</p>
+        </div>
+        <figure class="feature-media">
+          <img src="images/project3-thumb.jpg" alt="JavaScript Project Preview" />
+        </figure>
+      </button>
+
+      <button class="feature" onclick="window.location.href='Unity.html'">
+        <div class="feature-text">
+          <h2>Unity & Game Dev</h2>
+          <p>Check out my Unity-based projects and AI implementations with State Machines.</p>
+        </div>
+        <figure class="feature-media">
+          <img src="images/project4-thumb.jpg" alt="Unity Project Preview" />
+        </figure>
+      </button>
+
+      <button class="feature" onclick="window.location.href='Study.html'">
+        <div class="feature-text">
+          <h2>Study Notes</h2>
+          <p>Summaries, reports, and progress from my ICT studies and assignments.</p>
+        </div>
+        <figure class="feature-media">
+          <img src="images/project5-thumb.jpg" alt="Study Materials Preview" />
+        </figure>
+      </button>
+    </section>
+  </main>
+
+  <!-- FOOTER -->
+  <footer id="site-footer">
+    <p>© <span id="year"></span> Oleksandr Dzhhun. All rights reserved.</p>
+  </footer>
+
+  <!-- JS -->
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>

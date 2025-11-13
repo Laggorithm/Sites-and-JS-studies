@@ -1,0 +1,14 @@
+@media (max-width: 768px) {
+  main {
+    padding: 1rem;
+  }
+
+  .feature {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .feature-media img {
+    width: 80%;
+  }
+}

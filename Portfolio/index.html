@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/header.css">
+  <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="css/footer.css">
+  <link rel="stylesheet" href="css/responsive.css">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Great+Vibes&family=Old+Standard+TT&display=swap" rel="stylesheet">
+
+  <title>Portfolio</title>
+</head>
+<body>
+  <!-- HEADER -->
+  <header id="site-header">
+    <div class="header-inner">
+      <h1 class="site-title">Laggorithm</h1>
+
+      <!-- Дропбокс с навигацией -->
+      <label for="header-select" class="visually-hidden">Navigation</label>
+      
+      <select id="header-select" name="header-select" aria-label="Выберите раздел">
+        <option value="">— Examples —</option>
+        <option value="JS.html">JavaScript</option>
+        <option value="Python.html">Python</option>
+        <option value="C#.html">C#</option>
+        <option value="Study.html">Study tasks</option>
+        <option value="Contacts.html">Contacts</option>
+      </select>
+    </div>
+  </header>
+
+  <!-- MAIN -->
+  <main id="main-content">
+    <!-- Основная картинка и подпись -->
+    <section class="hero">
+      <img src="images/hero.png" alt="Главная демонстрационная картинка" class="hero-image" />
+      <p class="hero-caption">
+        Stand up! Be strong! Know right from wrong, whatever else -- believe yourself!
+      </p>
+    </section>
+
+    <!-- Блок с 3 текстами и 3 изображениями -->
+    <section class="features" aria-label="Проекты и изображения">
+      <article class="feature">
+        <div class="feature-text">
+          <h2>С#</h2>
+          <p>Finished my degree at Business College Helsinki in 2024, recieving basic degree in ICT with grade point average of 4.83/5. </p>
+          <p></p>
+          <p>My greatest accomplishmen was being able to study basics and implementation ways for State Machine, which I used for a boss in my final project game</p>
+        </div>
+        <figure class="feature-media">
+          <img src="images/project1-thumb.jpg" alt="Placeholder" />
+        </figure>
+      </article>
+
+      <article class="feature">
+        <div class="feature-text">
+          <h2>Python</h2>
+          <p>Studying basics of this coding language as a first year student at Metropolia AMK in Karamalmi</p>
+        </div>
+        <figure class="feature-media">
+          <img src="images/project2-thumb.jpg" alt="Placeholder 2" />
+        </figure>
+      </article>
+
+      <article class="feature">
+        <div class="feature-text">
+          <h2>JavaScript</h2>
+          <p>Studying this coding language as a first year student at Metropolia AMK in Karamalmi</p>
+        </div>
+        <figure class="feature-media">
+          <img src="images/project3-thumb.jpg" alt="Placeholder 3" />
+        </figure>
+      </article>
+    </section>
+  </main>
+
+  <!-- FOOTER -->
+  <footer id="site-footer">
+    <p>© <span id="year"></span> Oleksandr Dzhhun. All rights reserved.</p>
+  </footer>
+
+  <!-- JS -->
+  <script>
+    // Устанавливаем текущий год в футере
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    // Реализация переходов через дропбокс
+    const select = document.getElementById('header-select');
+    select.addEventListener('change', function() {
+      const value = this.value;
+      if (value) {
+        window.location.href = value;
+      }
+    });
+  </script>
+</body>
+</html>

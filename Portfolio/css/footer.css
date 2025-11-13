@@ -1,0 +1,19 @@
+footer {
+  align-self: bottom;
+  text-align: center;
+  padding: 1rem;
+  font-size: 0.9rem;
+  background: rgba(15,15,15,0.6);
+  border-top: 1px solid rgba(255,255,255,0.1);
+  backdrop-filter: blur(10px);
+  color: #aaa;
+}
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+#site-footer {
+  margin-top: auto;
+}

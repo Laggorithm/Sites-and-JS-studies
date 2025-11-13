@@ -1,0 +1,47 @@
+header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  background: rgba(4, 145, 133, 0.903);
+  backdrop-filter: blur(10px);
+  border-radius: 5px;
+  border-bottom: 1px solid rgba(255,255,255,0.15);
+  z-index: 100;
+}
+
+.site-title {
+  font-size: 1.4rem;
+  font-weight: 600;
+  color: #fff;
+}
+
+#header-select {
+  padding: 0.5rem 1rem;
+  font-size: 1.2rem;
+  font-family: 'Garamond', serif;
+  border-radius: 8px;
+  border: 1px solid rgba(255,255,255,0.2);  
+  background-color: rgba(3, 30, 17, 0.888);
+  color: #0c865c;
+  backdrop-filter: blur(20px);
+  cursor: pointer;
+  transition: all 0.2s ease;
+  text-shadow: 2px 2px 2px rgba(245, 231, 31, 0.356);
+  min-width: 120px;
+}
+
+
+#header-select:hover {
+  background: #3c574e;
+}
+
+#header-select option {
+  background: rgba(3, 30, 17, 0.888);  
+  color: #0c865c;
+  text-shadow: 2px 2px 2px rgb(255, 255, 255),  4px 4px 4px rgb(255, 255, 255),
+  6px 6px 6px rgb(255, 255, 255);          
+}

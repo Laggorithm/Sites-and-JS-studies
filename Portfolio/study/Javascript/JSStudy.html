@@ -1,0 +1,103 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Portfolio — Study</title>
+
+  <!-- Стили -->
+  <link rel="stylesheet" href="../../css/base.css">
+  <link rel="stylesheet" href="../../css/header.css">
+  <link rel="stylesheet" href="../../css/main.css">
+  <link rel="stylesheet" href="../../css/footer.css">
+  <link rel="stylesheet" href="../../css/responsive.css">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Great+Vibes&family=Old+Standard+TT&display=swap" rel="stylesheet">
+</head>
+
+<body>
+   <!-- HEADER -->
+  <header id="site-header">
+    <div class="header-inner">
+      <h1 class="site-title">Laggorithm</h1>
+
+      <!-- Дропбокс с навигацией -->
+      <label for="header-select" class="visually-hidden">Navigation</label>
+      
+      <select id="header-select" name="header-select" aria-label="Выберите раздел">
+        <option value="">— Navigation —</option>
+        <option value="../../index.html">Main</option>
+      </select>
+      <script>
+   
+  const headerSelect = document.getElementById('header-select');
+  headerSelect.addEventListener('change', function() {
+    const selectedValue = this.value;
+    if (selectedValue) {
+      window.location.href = selectedValue; // Переход по ссылке
+    }
+  });
+</script>
+    </div>
+  </header>
+<div style="margin: 5%;">Внешний отступ</div>
+
+    <!-- Навигационные кнопки в виде feature-блоков -->
+    <section class="features" aria-label="Study navigation buttons">
+      <button class="feature" onclick="window.location.href='Task1/T1.html'">
+        <div class="feature-text">
+          <h2>Module 1</h2>
+          <p>Interactive programs + Conditional expressions and loops</p>
+        </div>
+        <figure class="feature-media">
+        </figure>
+      </button>
+
+      <button class="feature" onclick="window.location.href='empty.html'">
+        <div class="feature-text">
+          <h2>Module 2</h2>
+          <p>About tasks content</p>
+        </div>
+        <figure class="feature-media">
+        </figure>
+      </button>
+
+      <button class="feature" onclick="window.location.href='JS.html'">
+        <div class="feature-text">
+          <h2>Module 3</h2>
+          <p>About tasks content</p>
+        </div>
+        <figure class="feature-media">
+        </figure>
+      </button>
+
+      <button class="feature" onclick="window.location.href='Unity.html'">
+        <div class="feature-text">
+          <h2>Module 4</h2>
+          <p>About tasks content</p>
+        </div>
+        <figure class="feature-media">
+        </figure>
+      </button>
+
+      <button class="feature" onclick="window.location.href='Study.html'">
+        <div class="feature-text">
+          <h2>Study Notes</h2>
+          <p>Summaries, reports, and progress from my ICT studies and assignments.</p>
+        </div>
+        <figure class="feature-media">
+        </figure>
+      </button>
+    </section>
+  </main>
+
+  <!-- FOOTER -->
+  <footer id="site-footer">
+    <p>© <span id="year"></span> Oleksandr Dzhhun. All rights reserved.</p>
+  </footer>
+
+  <!-- JS -->
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
