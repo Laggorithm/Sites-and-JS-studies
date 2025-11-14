@@ -1,7 +1,33 @@
+//Task6
+function RollD6() {
 
+  //randomize number from 1 to 6 and save it to variable, then print out
+  const d6 = Math.floor(Math.random() * 6) + 1;
+  const ul = document.querySelector("#d6-list");
+  const li = document.createElement("li");
+  li.textContent = "You rolled a " + d6;
+  ul.appendChild(li);
+}
 
-//Task_1
-
+//Task_9
+function RandomEvenNumbers(){
+  const numbers = [];
+  const evenNumbers = [];
+  //randomize numbers in to numbers list first
+  while (numbers.length < 10) {
+    const randNum = Math.floor(Math.random() * 100) + 1;
+    if (!numbers.includes(randNum)) {
+      numbers.push(randNum);
+    }
+  }
+  //filter even numbers
+  for (let i = 0; i < numbers.length; i++) {
+    if (numbers[i] % 2 === 0) {
+      evenNumbers.push(numbers[i]);
+    }
+  }
+  document.querySelector("#randomEvens").innerHTML = "Random Numbers: " + numbers.join(", ") + "<br>Even Numbers: " + evenNumbers.join(", ");
+}
 
 //Task_10
 const candidates = [];
