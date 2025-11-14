@@ -84,3 +84,8 @@ button {
   font-size: 24px;
   color: #18cc93;
  }
+button:hover {
+  background-color: #9b3e37;
+  backdrop-filter: blur(4px);
+
+}

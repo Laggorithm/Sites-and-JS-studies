@@ -1,3 +1,5 @@
+
+
 //Task6
 function RollD6() {
 
@@ -7,6 +9,14 @@ function RollD6() {
   const li = document.createElement("li");
   li.textContent = "You rolled a " + d6;
   ul.appendChild(li);
+}
+
+//Task_8
+function ConcatArrays(){
+  const words = ["Hello", "world", "this", "is", "JavaScript"];
+    document.querySelector("#concatResult").innerHTML = words.reduce((Welded, currentName ) => {
+    return Welded + currentName;
+  }, "");
 }
 
 //Task_9
@@ -33,6 +43,7 @@ function RandomEvenNumbers(){
 const candidates = [];
 
 function Candidates(){
+  candidates == [];
   const amount = prompt("Enter number of candidates:");
   for (let i = 0; i < amount; i++) {
     const name = prompt(`Enter name of candidate ${i + 1}:`);
