@@ -102,3 +102,58 @@ const picArray = [
    </figure>
    <p>description_from_picArray</p>
 </article>*/
+
+const mainElement = document.querySelector('main');
+const section = document.querySelector('#pictures');
+const dialog = document.querySelector('dialog');
+const closeButton = document.querySelector('dialog span');
+const dialogImg = document.querySelector('dialog img');
+
+// render at most 3 pictures
+picArray.slice(0, 3).forEach((pic) => {
+  const article = document.createElement('article');
+  article.classList.add('card');
+
+  const h2 = document.createElement('h2');
+  h2.textContent = pic.title;
+  article.appendChild(h2);
+
+  const figure = document.createElement('figure');
+
+  const img = document.createElement('img');
+  img.src = pic.image.medium;
+  img.alt = pic.title;
+  figure.appendChild(img);
+
+  const figcaption = document.createElement('figcaption');
+  figcaption.textContent = pic.caption;
+  figure.appendChild(figcaption);
+
+  article.appendChild(figure);
+
+  const p = document.createElement('p');
+  p.textContent = pic.description;
+  article.appendChild(p);
+
+  // Add click event to article
+  article.addEventListener('click', () => {
+    dialogImg.src = pic.image.large;
+    dialogImg.alt = pic.title;
+    dialog.showModal();
+  });
+
+  section.appendChild(article);
+});
+
+// Close dialog when clicking the close button
+closeButton.addEventListener('click', () => {
+  dialog.close();
+});
+
+// Close dialog when clicking outside the dialog (on backdrop)
+dialog.addEventListener('click', (e) => {
+  if (e.target === dialog) {
+    dialog.close();
+  }
+});
+
