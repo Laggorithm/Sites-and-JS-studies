@@ -68,7 +68,7 @@ main {
   box-shadow: 0 0 10px rgba(0,0,0,0.4);
 }
 
-button {
+button, .button {
   display: inline-block;
   margin-top: 1rem;
   padding: 0.75rem 1.5rem;
